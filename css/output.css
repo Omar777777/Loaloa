@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -32,7 +31,7 @@
     --color-hover-color: #ad303c;
     --color-svg-color: #DC3545;
     --color-box-color: #f1ede2;
-    --color-hero-color: #dfd7d7;
+    --color-hero-color: #9e1c43;
   }
 }
 @layer base {
@@ -291,9 +290,6 @@
   .bg-\[\#9e1c43\] {
     background-color: #9e1c43;
   }
-  .bg-\[9e1c43\] {
-    background-color: 9e1c43;
-  }
   .bg-box-color {
     background-color: var(--color-box-color);
   }
@@ -302,9 +298,6 @@
   }
   .bg-main-color {
     background-color: var(--color-main-color);
-  }
-  .bg-red-800 {
-    background-color: var(--color-red-800);
   }
   .fill-svg-color {
     fill: var(--color-svg-color);
@@ -379,19 +372,9 @@
       }
     }
   }
-  .xs\:h-20 {
-    @media (width >= 0rem) {
-      height: calc(var(--spacing) * 20);
-    }
-  }
   .xs\:w-1\/4 {
     @media (width >= 0rem) {
       width: calc(1/4 * 100%);
-    }
-  }
-  .xs\:w-25 {
-    @media (width >= 0rem) {
-      width: calc(var(--spacing) * 25);
     }
   }
   .xs\:p-4 {
@@ -403,12 +386,6 @@
     @media (width >= 0rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-  .xs\:text-3xl {
-    @media (width >= 0rem) {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .xs\:text-4xl {
@@ -443,19 +420,9 @@
       margin-inline: auto;
     }
   }
-  .lg\:h-14 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 14);
-    }
-  }
   .lg\:w-3\/4 {
     @media (width >= 64rem) {
       width: calc(3/4 * 100%);
-    }
-  }
-  .lg\:w-20 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 20);
     }
   }
   .lg\:w-\[60\%\] {

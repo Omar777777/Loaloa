@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@theme {
+    --color-main-color: #ea6c82;
+    --color-hover-color: #ad303c;
+    --color-svg-color:#DC3545;
+    --color-box-color: #f1ede2;
+    --breakpoint-xs: 0rem;
+    --color-hero-color: #dfd7d7;
+}
+
+/* 1280px 1670px */
+
+/* @media (min-width:1280px) and (max-width:1670px) {
+    .title{
+        font-size: 1.3rem;
+    }
+} */
+
+.contact-box{
+    border-bottom: 5px solid;
+    border-right: 5px dashed;
+    border-color: #DC3545;
+}

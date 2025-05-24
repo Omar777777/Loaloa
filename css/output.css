@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -180,9 +181,6 @@
   }
 }
 @layer utilities {
-  .col-span-2 {
-    grid-column: span 2 / span 2;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -240,12 +238,6 @@
   .border-collapse {
     border-collapse: collapse;
   }
-  .scale-120 {
-    --tw-scale-x: 120%;
-    --tw-scale-y: 120%;
-    --tw-scale-z: 120%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
   .resize {
     resize: both;
   }
@@ -263,12 +255,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-items-center {
-    justify-items: center;
-  }
-  .place-self-center {
-    place-self: center;
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
@@ -302,6 +288,12 @@
   .border-b-gray-500 {
     border-bottom-color: var(--color-gray-500);
   }
+  .bg-\[\#9e1c43\] {
+    background-color: #9e1c43;
+  }
+  .bg-\[9e1c43\] {
+    background-color: 9e1c43;
+  }
   .bg-box-color {
     background-color: var(--color-box-color);
   }
@@ -310,6 +302,9 @@
   }
   .bg-main-color {
     background-color: var(--color-main-color);
+  }
+  .bg-red-800 {
+    background-color: var(--color-red-800);
   }
   .fill-svg-color {
     fill: var(--color-svg-color);
@@ -468,16 +463,6 @@
       width: 60%;
     }
   }
-  .lg\:max-w-0\.5 {
-    @media (width >= 64rem) {
-      max-width: calc(var(--spacing) * 0.5);
-    }
-  }
-  .lg\:max-w-1 {
-    @media (width >= 64rem) {
-      max-width: calc(var(--spacing) * 1);
-    }
-  }
   .lg\:max-w-1\/2 {
     @media (width >= 64rem) {
       max-width: calc(1/2 * 100%);
@@ -498,19 +483,9 @@
       grid-template-columns: 30% minmax(0,1fr);
     }
   }
-  .lg\:justify-center {
-    @media (width >= 64rem) {
-      justify-content: center;
-    }
-  }
   .lg\:gap-3 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 3);
-    }
-  }
-  .lg\:justify-self-center {
-    @media (width >= 64rem) {
-      justify-self: center;
     }
   }
   .lg\:p-0 {
@@ -551,11 +526,6 @@
       grid-column: span 1 / span 1;
     }
   }
-  .xl\:col-span-2 {
-    @media (width >= 80rem) {
-      grid-column: span 2 / span 2;
-    }
-  }
   .xl\:flex {
     @media (width >= 80rem) {
       display: flex;
@@ -566,39 +536,9 @@
       min-height: 100vh;
     }
   }
-  .xl\:max-w-1 {
-    @media (width >= 80rem) {
-      max-width: calc(var(--spacing) * 1);
-    }
-  }
-  .xl\:max-w-1\/1 {
-    @media (width >= 80rem) {
-      max-width: calc(1/1 * 100%);
-    }
-  }
-  .xl\:max-w-1\/2 {
-    @media (width >= 80rem) {
-      max-width: calc(1/2 * 100%);
-    }
-  }
-  .xl\:max-w-10 {
-    @media (width >= 80rem) {
-      max-width: calc(var(--spacing) * 10);
-    }
-  }
   .xl\:max-w-\[100\%\] {
     @media (width >= 80rem) {
       max-width: 100%;
-    }
-  }
-  .xl\:max-w-\[100\] {
-    @media (width >= 80rem) {
-      max-width: 100;
-    }
-  }
-  .xl\:min-w-1\/2 {
-    @media (width >= 80rem) {
-      min-width: calc(1/2 * 100%);
     }
   }
   .xl\:min-w-\[100\%\] {
@@ -609,11 +549,6 @@
   .xl\:grid-cols-3 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .xl\:grid-cols-4 {
-    @media (width >= 80rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .xl\:flex-col {
@@ -631,21 +566,6 @@
   border-bottom: 5px solid;
   border-right: 5px dashed;
   border-color: #DC3545;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -733,9 +653,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;

@@ -186,6 +186,9 @@
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
+  .me-4 {
+    margin-inline-end: calc(var(--spacing) * 4);
+  }
   .me-20 {
     margin-inline-end: calc(var(--spacing) * 20);
   }
@@ -296,6 +299,9 @@
   .bg-hero-color {
     background-color: var(--color-hero-color);
   }
+  .bg-hover-color {
+    background-color: var(--color-hover-color);
+  }
   .bg-main-color {
     background-color: var(--color-main-color);
   }
@@ -314,8 +320,14 @@
   .py-\[1em\] {
     padding-block: 1em;
   }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
@@ -335,6 +347,9 @@
   }
   .text-hover-color {
     color: var(--color-hover-color);
+  }
+  .text-main-color {
+    color: var(--color-main-color);
   }
   .text-white {
     color: var(--color-white);
